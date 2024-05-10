@@ -118,22 +118,10 @@ const Footer = () => {
   const renderProjectInfo = React.useCallback((gridArea?: GridProps['gridArea']) => {
     return (
       <Box gridArea={ gridArea }>
-        <Link fontSize="xs" href="https://www.blockscout.com">blockscout.com</Link>
+        <Link fontSize="xs" href="https://arzeshwallet.com/">ArzeshWallet</Link>
         <Text mt={ 3 } fontSize="xs">
-          Blockscout is a tool for inspecting and analyzing EVM based blockchains. Blockchain explorer for Ethereum Networks.
+        Arzeshscan is a Block Explorer and Analytics Platform for Arzeshchain, a semi-centralized smart contracts platform.
         </Text>
-        <VStack spacing={ 1 } mt={ 6 } alignItems="start">
-          { apiVersionUrl && (
-            <Text fontSize="xs">
-              Backend: <Link href={ apiVersionUrl } target="_blank">{ backendVersionData?.backend_version }</Link>
-            </Text>
-          ) }
-          { frontendLink && (
-            <Text fontSize="xs">
-              Frontend: { frontendLink }
-            </Text>
-          ) }
-        </VStack>
       </Box>
     );
   }, [ apiVersionUrl, backendVersionData?.backend_version, frontendLink ]);
